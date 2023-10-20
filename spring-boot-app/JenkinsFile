@@ -61,7 +61,7 @@ pipeline {
 
  stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
+            GIT_REPO_NAME = "jaswanthnasa_v1"
             GIT_USER_NAME = "jaswanthnasa"
         }
         steps {
@@ -70,8 +70,8 @@ pipeline {
                     git config user.email "test@gmail.com"
                     git config user.name "Mighty Raju"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/ultimate-cicd:.*/ultimate-cicd:${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
-                    git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
+                    sed -i "s/ultimate-cicd:.*/ultimate-cicd:${BUILD_NUMBER}/g" java-application-manifests/deployment.yml
+                    git add java-application-manifests/deployment.yml
                     # git add .
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
