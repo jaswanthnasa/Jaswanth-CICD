@@ -27,7 +27,7 @@ pipeline {
 
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL =  $SONAR_AUTH_TOKEN
+        SONAR_URL =  "http://100.26.165.238:9000/"
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
