@@ -9,7 +9,7 @@ pipeline {
     }
 
  parameters {
-  string(name: 'SONAR_URL', defaultValue: '', description: 'enter sonarqube url')
+  string(name: 'SONAR_URL', defaultValue: 'http://100.26.171.159:9000/', description: 'enter sonarqube url')
 
  }
   
@@ -67,7 +67,7 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    git clone https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}
+                    git pull https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}
                     git config user.email "test@gmail.com"
                     git config user.name "Mighty Raju"
                     BUILD_NUMBER=${BUILD_NUMBER}
