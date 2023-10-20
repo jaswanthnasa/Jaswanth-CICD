@@ -2,5 +2,5 @@ projectKey=com.abhishek:java-application
 serverUrl=http://100.26.165.238:9000
 serverVersion=9.4.0.54424
 dashboardUrl=http://100.26.165.238:9000/dashboard?id=com.abhishek%3Ajava-application
-ceTaskId=AYtN-ZWMDdC6bMXsI7eD
-ceTaskUrl=http://100.26.165.238:9000/api/ce/task?id=AYtN-ZWMDdC6bMXsI7eD
+ceTaskId=AYtN-krcDdC6bMXsI7eE
+ceTaskUrl=http://100.26.165.238:9000/api/ce/task?id=AYtN-krcDdC6bMXsI7eE
