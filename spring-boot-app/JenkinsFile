@@ -71,6 +71,7 @@ pipeline {
                     git config user.email "test@gmail.com"
                     git config user.name "Mighty Raju"
                     BUILD_NUMBER=${BUILD_NUMBER}
+                    cd jaswanthnasa_v1
                     sed -i "s/ultimate-cicd:.*/ultimate-cicd:${BUILD_NUMBER}/g" java-application-manifests/deployment.yml
                     git add java-application-manifests/deployment.yml
                     # git add .
